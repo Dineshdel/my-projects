@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { useUserContext } from "./context/usercontext";
-import Footer from "./Footer";
-// import axios from "axios";
 
 function ListPages() {
   const { data, handleDelete, handleUpdate } = useUserContext();
@@ -30,15 +28,25 @@ function ListPages() {
   };
 
   return (
-    <div className="table-list px-2 ff" >
+    <div className="table-list px-2 ff">
       <table className="table table-bordered px-2">
         <thead>
           <tr className="table-row">
-            <th scope="col" className="colors text-white">S.No</th>
-            <th scope="col" className="colors text-white">Name</th>
-            <th scope="col" className="colors text-white">Email</th>
-            <th scope="col" className="colors text-white">Phone</th>
-            <th scope="col" className="colors text-white">Actions</th>
+            <th scope="col" className="colors text-white">
+              S.No
+            </th>
+            <th scope="col" className="colors text-white">
+              Name
+            </th>
+            <th scope="col" className="colors text-white">
+              Email
+            </th>
+            <th scope="col" className="colors text-white">
+              Phone
+            </th>
+            <th scope="col" className="colors text-white">
+              Actions
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -83,7 +91,7 @@ function ListPages() {
                   <button
                     type="button"
                     className="btn text-white"
-                    style={{backgroundColor:"#563d7c"}}
+                    style={{ backgroundColor: "#563d7c" }}
                     onClick={handleEditSubmit}
                   >
                     Update
@@ -93,7 +101,7 @@ function ListPages() {
                     <button
                       type="button"
                       className="btn text-white mt-2 me-4 px-3"
-                      style={{backgroundColor:"#1f3265"}}
+                      style={{ backgroundColor: "#1f3265" }}
                       onClick={() => handleEditClick(user)}
                     >
                       Edit
@@ -112,7 +120,6 @@ function ListPages() {
           ))}
         </tbody>
       </table>
-      <Footer/>
     </div>
   );
 }
